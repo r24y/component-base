@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import {EventEmitter} from 'events';
 
-window.makeComponent = function (componentName, prototype) {
+window.makeComponent = function makeComponent(componentName, prototype) {
   const importDoc = document.currentScript.ownerDocument;
   const proto = Object.create(HTMLElement.prototype);
 
@@ -67,3 +67,5 @@ window.makeComponent = function (componentName, prototype) {
     return _.template(tplStr, opts);
   }
 };
+
+export default makeComponent;
