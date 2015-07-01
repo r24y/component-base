@@ -1,0 +1,25 @@
+<html>
+<head>
+  <style>
+    my-timer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <script src="node_modules/nx-base/index.js"></script>
+  <my-timer></my-timer>
+  <my-timer update-interval=50></my-timer>
+
+  <script>
+  var Timer = makeComponent('my-timer', {
+    initialize: function () {
+      var now = +new Date();
+      setInterval(function () {
+        this.shadowRoot.innerHTML = Math.round((+new Date - now) / 100) / 10;
+      }.bind(this), this.getAttribute('update-interval') || 200);
+    }
+  });
+  </script>
+</body>
+</html>
