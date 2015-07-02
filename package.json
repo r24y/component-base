@@ -1,5 +1,5 @@
 {
-  "name": "r24y/component-base",
+  "name": "component-base",
   "version": "1.1.0",
   "description": "Base for Web Components",
   "main": "index.js",
